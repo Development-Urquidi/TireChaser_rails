@@ -1,0 +1,52 @@
+<h1>Edit Tire Entry</h1>
+
+<%= form_for :tire, url: tire_path(@tire), method: :patch do |f| %>
+
+    <% if @tire.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@tire.errors.count, "error") %> prohibited
+            this tire entry from being saved:
+          </h2>
+          <ul>
+            <% @tire.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <p>
+      <%= tire.label :model %>
+      <br />
+      <%= tire.text_field :model %>
+      <br />
+    </p>
+
+    <p>
+      <%= tire.label :brand%>
+      <br />
+      <%= tire.text_field :brand %>
+      <br />
+    </p>
+
+    <p>
+      <%= tire.label :price%>
+      <br />
+      <%= tire.number_field :price %>
+      <br />
+    </p>
+    <p>
+      <%= tire.label :quantity%>
+      <br />
+      <%= tire.number_field :quantity %>
+      <br />
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+
+<% end %>
+
+<%= link_to 'Back', articles_path %>

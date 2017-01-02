@@ -1,0 +1,19 @@
+<%= form_for([@vendor, @vendor.tires.build]) do |tire| %>
+    <%= tire.label :brand %>
+    <br />
+    <%= tire.text_field :brand %>
+    <br />
+    <%= tire.label :model %>
+    <br />
+    <%= tire.text_field :model %>
+    <br />
+    <%= tire.label :price%>
+    <br />
+    <%= tire.number_field :price %>
+    <br />
+    <%= tire.label :quantity%>
+    <br />
+    <%= tire.number_field :quantity %>
+    <br />
+    <%= tire.submit %>
+<% end %>

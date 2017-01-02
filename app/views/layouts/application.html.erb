@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TireChaser</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <p class="text-muted">TIRE CHASER</p>
+        <ul class="topnav" id="myTopnav">
+          <li><%= link_to 'Home', vendors_path %></li>
+          <li><%= link_to 'Deals', pages_about_path%></li>
+          <li><%= link_to 'Contact', pages_about_path%></li>
+          <li><%= link_to 'About', pages_about_path%></li>
+          <li class="icon">
+            <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+          </li>
+        </ul>
+      </div>
+    </div><!-- /container -->
+    <%= yield %>
+    <footer class="footer">
+      <p>&copy; 2016 Media Moolah LLC</p>
+    </footer>
+
+  </body>
+</html>

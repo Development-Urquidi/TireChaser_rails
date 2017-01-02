@@ -1,0 +1,44 @@
+<div id = 'vendorlayout'>
+
+  <div id= 'vendorinfo'>
+
+  <h2>Name:</h2>
+  <p><%= @vendor.name %></p>
+  <br />
+  <h2>Address:</h2>
+  <p><%= @vendor.address %></p>
+  </div>
+
+  <div id='new_tire'>
+    <p>Create new tire:</p>
+    <%= render '/tires/form.html.erb' %>
+  </div>
+
+  <div = 'inventory'>
+  <h2>Inventory</h2>
+      <table>
+        <tr>
+          <td>Tire ID</td>
+          <td>Maker</td>
+          <td>Model</td>
+          <td colspan="2"></td>
+        </tr>
+        <% @vendor.tires.each do |h| %>
+      <tr>
+        <td><%= h.id %></td>
+        <td><%= h.brand %></td>
+        <td><%= h.model %></td>
+        <td><%= link_to 'Edit', edit_vendor_tire_path(@vendor, @vendor.tires) %></td>
+        <td><%= link_to 'Delete Tire', vendor_tire_path(@vendor, @vendor.tires),
+                        method: :delete,
+                        data: { confirm: 'Are you sure you want to delete this tire record?' } %></td>
+      </tr>
+        <% end %>
+      </table>
+  </div>
+
+<p>
+  <%= link_to 'Back', admin_vendors_path, class: 'btn btn-lg btn-success'%>
+</p>
+
+</div>

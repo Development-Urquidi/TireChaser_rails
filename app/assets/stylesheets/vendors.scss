@@ -1,0 +1,326 @@
+// Place all the styles related to the vendors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.header, .footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.header p {
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 40px;
+  font-weight: lighter;
+  font: 10px;
+  font-family: arial;
+  text-align: center;
+  -webkit-text-fill-color: #e5e5e5;
+}
+
+.footer {
+  padding-top: 30px;
+  color: #3d3d3d;
+}
+
+#jbwrapper{
+  width: 80%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-top: 30px;
+
+  .jumbotron {
+    text-align: center;
+    border: none;
+    color: #e5e5e5;
+    width: 48%;
+    height: auto;
+    border-radius: 10px;
+
+    select { color: #3d3d3d}
+
+    p {
+      margin-bottom: 15px;
+      font-size: 30px;
+      font-weight: normal;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      font-size: 21px;
+      background: none;
+      border: solid 2px #555;
+    }
+    .btn:hover,
+    .btn:focus,
+    .btn.focus {
+      background: #555;
+      transition: .3s;
+    }
+  }
+}
+
+// #search_by_car
+
+#jbFeature {
+  float: left;
+  background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(wheelBG.jpg);
+  background-position: left;
+}
+
+#jbCar{
+  float: right;
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(carBG.jpg);
+  background-size: cover;
+  background-position: center;
+
+  a { margin: 0 auto }
+}
+
+
+#jbContainer {
+  height : 300px;
+
+  p { padding-bottom: 30px }
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+  .header, .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+}
+
+portal a {
+  width: 100%;
+  text-align: right;
+  text-decoration: none;
+  color: #3d3d3d;
+}
+
+/*Just one jumbotron this time :) */
+
+.jumbotron {
+  width: 80%;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding-top: 20px;
+  background: url('maserati.jpg');
+  background-position: center;
+  background-size: cover;
+
+  .jumbotronText {
+    width: 35%;
+    padding-left: 5%;
+    color: #e5e5e5
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+/*jumbotron end*/
+
+/*div with the search criteria*/
+#tireSearch {
+  margin-top: 20px;
+  margin-left: 10%;
+  width: 80%;
+  border-radius: 5px;
+  background-color: #383838;
+  height: 60px;
+
+  b {
+    color: #e5e5e5;
+    padding-right: 1%;
+    font-weight: normal;
+    font-size: 17px;
+    margin-left: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+}
+#thebutton{
+  padding-left: 45%;
+  padding-top: 15px;
+  padding-bottom: 80px;
+}
+
+.btn{
+  font-size: 18px;
+  background: none;
+  border: solid 2px #555;
+  margin: 0 auto;
+}
+
+.btn:hover, .btn:focus, .btn.focus{
+  background: #555;
+  transition: .3s;
+  border: solid 2px #555;
+}
+/*container for map and tire profile*/
+#topContainer{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 20px;
+}
+#map img{
+  width: 62%;
+  height: auto;
+  border-radius: 5px;
+  float: left;
+}
+
+/*map end*/
+
+#profile {
+  width: 25%;
+  float: right;
+  height: auto;
+  margin-right: 7%;
+  background-color: #2b2b2b;
+  border-radius: 5px;
+}
+
+#profile img{
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+}
+
+p{
+  color: #e5e5e5;
+  font-size: 14px;
+}
+
+#words {
+  border-top: 5px;
+}
+
+#dropdowns{
+  padding-top: 5px;
+  padding-left: 10%;
+}
+
+#list{
+  width: 80%;
+  margin-left: 10%;
+  height: auto;
+}
+
+.bracket {
+  height: 100px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+  border-radius: 5px;
+  margin-bottom: 5px;
+
+  :hover, :focus {
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+  }
+
+  img {
+    height: 100px;
+    width: 40%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  p {
+    float: right;
+    padding-right: 5%;
+    font-size: 30px;
+  }
+}
+
+//Admin page
+
+#adminwrapper {
+
+  margin-left: 10%;
+  width: 81%;
+  display: flex;
+  margin-bottom: 280px;
+
+  #new_vendor {
+    color: #e5e5e5;
+    width: 40%;
+  }
+
+  #vendor_list {
+    color: #e5e5e5;
+    width: 40%;
+    float: right;
+
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 50px 0;
+    table-layout: fixed;
+  }
+
+  th{
+    width: 100px;
+  }
+
+  td {
+    padding: 10px 0;
+  }
+
+
+  input {
+    color: #383838;
+  }
+}
+
+//Admin page end
+
+//Vendor information pages
+
+#vendorlayout {
+  display: flex;
+  div{
+    margin-left: 5%;
+  }
+  label, h2{
+    color: #e5e5e5;
+
+  }
+
+  table{
+    border-collapse: separate;
+    border-spacing: 50px 0;
+    table-layout: fixed;
+    color: #e5e5e5;
+  }
+
+  .btn {
+    margin-top: 5%;
+    margin-left: 10%;
+    color: #383838;
+  }
+
+  #vendorinfo {
+    margin-left: 10%;
+
+
+    p {
+      color: #e5e5e5;
+      font-size: 23px;
+    }
+
+
+  }
+}
+//Vendor information end

@@ -1,0 +1,11 @@
+<%= form_for Vendor.new do |vendor| %>
+    <%= vendor.label :name %>
+    <br />
+    <%= vendor.text_field :name %>
+    <br />
+    <%= vendor.label :address %>
+    <br />
+    <%= vendor.text_field :address %>
+    <br />
+    <%= vendor.submit %>
+<% end %>
