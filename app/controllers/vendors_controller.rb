@@ -47,7 +47,7 @@ class VendorsController < ApplicationController
 
   def show
     @vendor = Vendor.find(params[:id])
-    @tire = @vendor.tires.build
+    @vendor_tires = @vendor.tires.all
   end
 
   def search_by_tire

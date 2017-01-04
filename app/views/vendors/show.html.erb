@@ -21,24 +21,25 @@
           <td>Tire ID</td>
           <td>Maker</td>
           <td>Model</td>
+          <td>Price</td>
           <td colspan="2"></td>
         </tr>
-        <% @vendor.tires.each do |h| %>
+        <% @vendor_tires.each do |h| %>
       <tr>
         <td><%= h.id %></td>
         <td><%= h.brand %></td>
         <td><%= h.model %></td>
-        <td><%= link_to 'Edit', edit_vendor_tire_path(@vendor, @vendor.tires) %></td>
-        <td><%= link_to 'Delete Tire', vendor_tire_path(@vendor, @vendor.tires),
+        <td><%= h.price %></td>
+        <td><%= link_to 'Edit', edit_vendor_tire_path(@vendor.id, h.id) %></td>
+        <td><%= link_to 'Delete Tire', vendor_tire_path(@vendor.id, h.id),
                         method: :delete,
                         data: { confirm: 'Are you sure you want to delete this tire record?' } %></td>
       </tr>
         <% end %>
       </table>
   </div>
-
-<p>
+</div>
+<p id = 'backbutton'>
   <%= link_to 'Back', admin_vendors_path, class: 'btn btn-lg btn-success'%>
 </p>
 
-</div>
