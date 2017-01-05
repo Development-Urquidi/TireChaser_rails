@@ -11,8 +11,13 @@ class VendorsController < ApplicationController
     @vendors = Vendor.all
   end
 
+  def error
+    @vendor = Vendor.find(params[:id])
+  end
+
   def new
     @vendor = Vendor.new
+    @vendor = Vendor.find(params[:id])
   end
 
   def create
@@ -20,7 +25,7 @@ class VendorsController < ApplicationController
     if @vendor.save
       redirect_to vendor_path @vendor
     else
-      render action: :new
+      render '_error'
     end
   end
 

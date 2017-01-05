@@ -1,0 +1,16 @@
+<%= form_for Vendor.new do |vendor| %>
+
+    <% if @vendor.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@vendor.errors.count, "error") %> prohibited this vendor from being generated:
+          </h2>
+          <ul>
+            <% @vendor.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+          <%= render 'new' %>
+    <% end %>
+<% end %>

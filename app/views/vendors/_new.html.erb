@@ -1,4 +1,6 @@
+<div id="newvenform">
 <%= form_for Vendor.new do |vendor| %>
+
     <%= vendor.label :name %>
     <br />
     <%= vendor.text_field :name %>
@@ -9,3 +11,4 @@
     <br />
     <%= vendor.submit %>
 <% end %>
+</div>

@@ -1,0 +1,17 @@
+<%= form_for([@vendor, @vendor.tires.new]) do |tire| %>
+
+    <% if @tire.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@tire.errors.count, "error") %> prohibited this vendor from being generated:
+          </h2>
+          <ul>
+            <% @tire.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+          <%= render 'form' %>
+          <%= link_to 'Back', vendor_path(@vendor), class: 'btn btn-lg btn-success'%>
+        </div>
+    <% end %>
+<% end %>

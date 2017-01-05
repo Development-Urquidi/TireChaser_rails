@@ -28,6 +28,14 @@
   width: 200px;
 }
 
+textarea, input{
+  color: #383838;
+}
+
+label{
+  color: #e5e5e5;
+}
+
 #portal{
   padding-left: 15px;
   position: absolute;
@@ -47,6 +55,10 @@ table {
   width: 130%;
 }
 
+#newvenform, #error_explanation{
+  color: #fff;
+  margin-left: 10%;
+}
 
 #jbwrapper{
   width: 80%;
@@ -298,10 +310,6 @@ p{
     padding: 10px 0;
   }
 
-
-  input {
-    color: #383838;
-  }
 }
 
 //Admin page end
@@ -352,9 +360,6 @@ table{
     margin-top: 5%;
     color: #fff;
   }
-  textarea, input{
-    color: #383838;
-  }
 }
 
 //Vendor Edit End
@@ -369,8 +374,6 @@ h2{
     margin-top: 2%;
     color: #fff;
   }
-  textarea, input{
-    color: #383838;
-  }
+
 }
 //Tire Edit End

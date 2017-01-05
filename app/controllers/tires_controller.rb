@@ -6,8 +6,17 @@ class TiresController < ApplicationController
   def create
     @vendor = Vendor.find(params[:vendor_id])
     @tire = @vendor.tires.create(tire_params)
+    if @tire.save
       redirect_to vendor_path(@vendor)
+    else
+      render '_error'
+      end
 
+  end
+
+  def error
+    @vendor = Vendor.find(params[:vendor_id])
+    @tire = @vendor.tires.find(params[:id])
   end
 
   def edit
