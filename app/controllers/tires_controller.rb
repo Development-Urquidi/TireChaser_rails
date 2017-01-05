@@ -19,8 +19,8 @@ class TiresController < ApplicationController
     @vendor = Vendor.find(params[:vendor_id])
     @tire = @vendor.tires.find(params[:id])
 
-    if @tire.update(tires_params)
-      redirect_to admin_vendors_path(@vendor)
+    if @tire.update(tire_params)
+      redirect_to vendor_path(@vendor)
     else
       render 'edit'
     end

@@ -10,18 +10,19 @@
   </div>
 
   <div id='new_tire'>
-    <p>Create new tire:</p>
+    <h2>Create New Tire</h2>
     <%= render '/tires/form.html.erb' %>
   </div>
 
   <div = 'inventory'>
   <h2>Inventory</h2>
-      <table>
+      <table id="invtab">
         <tr>
           <td>Tire ID</td>
           <td>Maker</td>
           <td>Model</td>
           <td>Price</td>
+          <td>Stock</td>
           <td colspan="2"></td>
         </tr>
         <% @vendor_tires.each do |h| %>
@@ -30,8 +31,11 @@
         <td><%= h.brand %></td>
         <td><%= h.model %></td>
         <td><%= h.price %></td>
-        <td><%= link_to 'Edit', edit_vendor_tire_path(@vendor.id, h.id) %></td>
-        <td><%= link_to 'Delete Tire', vendor_tire_path(@vendor.id, h.id),
+        <td><%= h.quantity %></td>
+        <td>
+          <%= link_to 'Edit', edit_vendor_tire_path(@vendor.id, h.id) %>
+          &nbsp
+          <%= link_to 'Delete', vendor_tire_path(@vendor.id, h.id),
                         method: :delete,
                         data: { confirm: 'Are you sure you want to delete this tire record?' } %></td>
       </tr>

@@ -1,3 +1,4 @@
+<div id="vendoredit">
 <%= form_for :vendor, url: vendor_path(@vendor), method: :patch do |f| %>
 
     <% if @vendor.errors.any? %>
@@ -30,4 +31,5 @@
 
 <% end %>
 
-<%= link_to 'Back', vendors_path %>
+<%= link_to 'Back', admin_vendors_path, class: 'btn btn-lg btn-success'%>
+</div>

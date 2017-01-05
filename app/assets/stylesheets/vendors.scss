@@ -1,7 +1,7 @@
 // Place all the styles related to the vendors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.header, .footer {
+.header{
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -18,10 +18,35 @@
   -webkit-text-fill-color: #e5e5e5;
 }
 
-.footer {
-  padding-top: 30px;
-  color: #3d3d3d;
+.footer{
+  padding-left: 15px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  width: 200px;
 }
+
+#portal{
+  padding-left: 15px;
+  position: absolute;
+  right: 0;
+  bottom: 11px;
+  left: 190px;
+  padding: 1rem;
+}
+
+table {
+  table-layout: auto;
+  border-collapse: separate;
+  color: #e5e5e5;
+}
+
+#invtab{
+  width: 130%;
+}
+
 
 #jbwrapper{
   width: 80%;
@@ -264,11 +289,6 @@ p{
 
   }
 
-  table {
-    border-collapse: separate;
-    border-spacing: 50px 0;
-    table-layout: fixed;
-  }
 
   th{
     width: 100px;
@@ -297,13 +317,9 @@ p{
     color: #e5e5e5;
 
   }
+table{
 
-  table{
-    border-collapse: separate;
-    border-spacing: 50px 0;
-    table-layout: fixed;
-    color: #e5e5e5;
-  }
+}
 
   .btn {
     margin-top: 5%;
@@ -327,3 +343,34 @@ p{
   padding-left: 10%;
 }
 //Vendor information end
+
+//Vendor Edit Page
+
+#vendoredit {
+  margin-left: 10%;
+  .btn {
+    margin-top: 5%;
+    color: #fff;
+  }
+  textarea, input{
+    color: #383838;
+  }
+}
+
+//Vendor Edit End
+
+//Tire Entry Edit Page
+h2{
+  color:#fff;
+}
+#tireedit {
+  margin-left: 10%;
+  .btn {
+    margin-top: 2%;
+    color: #fff;
+  }
+  textarea, input{
+    color: #383838;
+  }
+}
+//Tire Edit End

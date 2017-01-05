@@ -1,6 +1,7 @@
-<h1>Edit Tire Entry</h1>
+<div id="tireedit">
+<h2>Edit Tire Entry</h2>
 
-<%= form_for :tire, url: tire_path(@tire), method: :patch do |f| %>
+<%= form_for :tire, url: vendor_tire_path(@vendor), method: :patch do |f| %>
 
     <% if @tire.errors.any? %>
         <div id="error_explanation">
@@ -17,30 +18,30 @@
     <% end %>
 
     <p>
-      <%= tire.label :model %>
-      <br />
-      <%= tire.text_field :model %>
-      <br />
+      <%= f.label :model %>
+      <br/>
+      <%= f.text_field :model %>
+      <br/>
     </p>
 
     <p>
-      <%= tire.label :brand%>
-      <br />
-      <%= tire.text_field :brand %>
-      <br />
+      <%= f.label :brand%>
+      <br/>
+      <%= f.text_field :brand %>
+      <br/>
     </p>
 
     <p>
-      <%= tire.label :price%>
-      <br />
-      <%= tire.number_field :price %>
-      <br />
+      <%= f.label :price%>
+      <br/>
+      <%= f.number_field :price %>
+      <br/>
     </p>
     <p>
-      <%= tire.label :quantity%>
-      <br />
-      <%= tire.number_field :quantity %>
-      <br />
+      <%= f.label :quantity%>
+      <br/>
+      <%= f.number_field :quantity %>
+      <br/>
     </p>
 
     <p>
@@ -49,4 +50,5 @@
 
 <% end %>
 
-<%= link_to 'Back', articles_path %>
+<%= link_to 'Back', vendor_path(@vendor), class: 'btn btn-lg btn-success'%>
+</div>
