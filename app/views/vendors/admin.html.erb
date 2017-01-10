@@ -1,0 +1,28 @@
+<div id="adminwrapper">
+  <div id='new_vendor'>
+    <p>Create new vendor:</p>
+    <%= render 'new' %>
+  </div>
+
+  <div id='vendor_list'>
+    <table>
+      <tr>
+        <th>Vendor&nbspID</th>
+        <th>Name</th>
+        <th colspan="2"></th>
+      </tr>
+
+      <% @vendors.each do |h| %>
+          <tr>
+            <td><%= h.id %></td>
+            <td><%= h.name %></td>
+            <td><%= link_to 'Show', vendor_path(h) %></td>
+            <td><%= link_to 'Edit', edit_vendor_path(h) %></td>
+            <td><%= link_to 'Delete', vendor_path(h),
+                            method: :delete,
+                            data: { confirm: 'Are you sure you want to delete this vendor and their associated tire records?' } %></td>
+          </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

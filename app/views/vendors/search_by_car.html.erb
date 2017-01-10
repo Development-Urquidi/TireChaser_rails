@@ -1,0 +1,37 @@
+<!-- Jumbotron -->
+<div>
+  <div class="jumbotron">
+    <div class="jumbotronText">
+      <h2>Maserati GranTurismo</h2>
+      <p>Inspired by the Maserati Birdcage 75th concept car, the GranTurismo is a magnificent example of gorgeous styling and brilliant engineering.</p>
+    </div>
+  </div>
+  <!-- end of Jumbotron -->
+<div id="tireSearch">
+  <b>Brand: </b>
+  <select name="tirebrand" autocomplete="off">
+  <option value="null" selected>Select Brand...</option>
+  <option value="null">Michelin</option>
+  </select>
+    <b>Feature: </b>
+    <select name="type" autocomplete="off">
+    <option value="null" selected>Select Type...</option>
+    <option value="null">Performance</option>
+    </select>
+  <b>Size: </b>
+  <select name="size1" autocomplete="off">
+   <option value="null" selected>Select Size</option>
+   <option value="null">205</option>
+ </select>
+ <select name="size2" autocomplete="off">
+  <option value="null" selected>Select Size</option>
+  <option value="null">55</option>
+</select>
+<select name="size3" autocomplete="off">
+ <option value="null" selected>Select Size</option>
+ <option value="null">15</option>
+</select><br>
+</div>
+<div id="thebutton">
+  <%= link_to 'Search', search_by_tire_vendors_path, class: 'btn btn-lg btn-success'%>
+</div>

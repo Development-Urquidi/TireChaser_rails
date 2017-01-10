@@ -1,0 +1,35 @@
+<div id="vendoredit">
+<%= form_for :vendor, url: vendor_path(@vendor), method: :patch do |f| %>
+
+    <% if @vendor.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@vendor.errors.count, "error") %> prohibited
+            this vendor page from being saved:
+          </h2>
+          <ul>
+            <% @vendor.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <p>
+      <%= f.label :name%><br>
+      <%= f.text_field :name%>
+    </p>
+
+    <p>
+      <%= f.label :address %><br>
+      <%= f.text_area :address %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+
+<% end %>
+
+<%= link_to 'Back', admin_vendors_path, class: 'btn btn-lg btn-success'%>
+</div>

@@ -1,0 +1,34 @@
+<div id="topContainer" class="clearfix">
+  <div id="map">
+    <!--<img src="map.jpg" alt="map">-->
+    <%= image_tag 'map.jpg' %>
+  </div>
+  <div id="profile" class="clearfix">
+    <%= image_tag 'tireprofile.jpg' %>
+    <div id="words">
+      <p>Brand: Michelin</p>
+      <p>Model: Pilot Sport A/S 3+</p>
+      <p>Type: Performance/Sport</p>
+      <p>Dimensions: 205 x 55 x 15</p>
+    </div>
+  </div>
+</div>
+
+<div id="dropdowns">
+  <p>Sort by:</p>
+
+  <select id="quality_select" name="quality" autocomplete="off">
+    <option default value="rate" selected>Shop Rating</option>
+    <option value="price">Lowest Price</option>
+  </select>
+
+  <select name="distance" autocomplete="off">
+    <option value="null" selected>Within...</option>
+    <option value="null">5 mi.</option>
+  </select>
+
+</div>
+
+<div id="list">
+  <!-- Populated on #quality_select change -->
+</div>
