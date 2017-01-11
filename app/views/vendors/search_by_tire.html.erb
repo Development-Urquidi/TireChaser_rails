@@ -1,10 +1,12 @@
 <div id="topContainer" class="clearfix">
-  <div id="map">
-    <!--<img src="map.jpg" alt="map">-->
-    <%= image_tag 'map.jpg' %>
+  <div id="list">
+    <!-- Populated on #quality_select change -->
   </div>
   <div id="profile" class="clearfix">
+    <div id=" pics">
     <%= image_tag 'tireprofile.jpg' %>
+    <%= image_tag 'wall.jpg' %>
+    </div>
     <div id="words">
       <p>Brand: Michelin</p>
       <p>Model: Pilot Sport A/S 3+</p>
@@ -13,6 +15,8 @@
     </div>
   </div>
 </div>
+
+<br>
 
 <div id="dropdowns">
   <p>Sort by:</p>
@@ -26,9 +30,10 @@
     <option value="null" selected>Within...</option>
     <option value="null">5 mi.</option>
   </select>
-
 </div>
 
-<div id="list">
-  <!-- Populated on #quality_select change -->
+<br>
+
+<div id="map">
+  <%= image_tag 'map.jpg' %>
 </div>
