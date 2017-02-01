@@ -1,7 +1,7 @@
 class VendorsController < ApplicationController
   before_filter :disable_layout, only: [:order_rate, :order_price]
 
-  http_basic_authenticate_with name: "marie", password: "llantasruedan",
+  http_basic_authenticate_with name: "marie", password: "yamanakasawao",
   except: [:index, :search_by_tire, :search_by_car, :order_rate, :order_price]
 
   def index
